@@ -1,0 +1,32 @@
+<div class="col-md-4 col-sm-12">
+										<div class="form-group">
+											<label>Department :</label>
+											<select name="department" class="custom-select form-control" required="true" autocomplete="off">
+												<option value="">Select Department</option>
+													<?php
+													$query = mysqli_query($conn,"select * from tbldepartments");
+													while($row = mysqli_fetch_array($query)){
+													
+													?>
+													<option value="<?php echo $row['DepartmentShortName']; ?>"><?php echo $row['DepartmentName']; ?></option>
+													<?php } ?>
+											</select>
+										</div>
+									</div>
+</div>
+
+
+
+department table: 
+
+1. CRS
+2. MCCD
+3. MAP
+4. CENSUS
+5. DATA CAPTURE CENTER
+6. ACCOUNTS & BUDGETS
+7. GENERAL ADMINISTRATION
+8. PUBLICITY & SOCIAL MEDIA
+9. LEGAL
+10.RAJBHASHA
+
